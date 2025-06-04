@@ -112,6 +112,7 @@ h2 {
 	flex-wrap: nowrap;
 }
 
+/* resource I used was https://www.w3schools.com/CSS/css_list.asp*/
 #content ul{
 	list-style-image: url(images/marker.gif);
 }

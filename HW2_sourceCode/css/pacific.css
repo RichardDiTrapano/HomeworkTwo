@@ -1,3 +1,10 @@
+/*
+Richard DiTrapano
+Started working on pacific.css 5/29/25
+The purpose of this project is to change
+the design of the webpage only using css
+*/
+
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 	display: block;
 }

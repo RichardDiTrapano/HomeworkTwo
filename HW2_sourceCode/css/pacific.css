@@ -1,0 +1,162 @@
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+body {
+	color: #00569f;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(images/ptrbackground.jpg);
+}
+
+
+
+/* the grid resource I used were both https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
+and https://www.w3schools.com/cssref/pr_grid-template-areas.php */
+
+#wrapper{
+	width: 80%;
+	min-width: 600px;
+	display: grid;
+  	grid-template-areas:
+    	"header header"
+		"nav info"
+		"nav contact"
+		"nav footer";
+	grid-template-columns: 1fr 10fr;
+	margin: auto;
+}
+
+#wrapper > header{grid-area: header;}
+
+#wrapper > nav{grid-area: nav;}
+
+#wrapper > #content{grid-area: info;}
+
+#wrapper > #contact{grid-area: contact;}
+
+#wrapper > footer{grid-area: footer;}
+
+/*
+for the background image, the resource I used was: https://www.w3schools.com/css/css_background_image.asp
+for the position/not having it repeat, I used: https://www.w3schools.com/css/css_background_attachment.asp
+*/
+header{
+	background-image: url(images/sunset.jpg);
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-color: #000033;
+	
+}
+
+
+nav{
+	background-color: #83c6e8;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 15px;
+	width: 150px;
+}
+
+nav ul {
+	font-size: 1.2em;
+	
+	/* found how to remove bullet points on W3School page 
+	(url: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_list_without_bullets) 
+	*/
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	
+	
+
+}
+
+nav a{
+	color: #000033;
+
+	/* found how to remove the underline here: https://www.freecodecamp.org/news/remove-underline-from-link-in-css/ */
+	text-decoration: none;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+
+}
+
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+	color: white;
+}
+h2 {
+	color: #5ea9ce;
+	font-size: 30px;
+	padding-bottom: 0%;
+	padding-top: 0px;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#content{
+	background-color: white;
+	padding-left: 15px;
+	padding-top: 1px;
+	padding-right: 15%;
+	word-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+
+#content ul{
+	list-style-image: url(images/marker.gif);
+}
+
+#content .resort::first-line{
+	font-size: larger;
+}
+
+.resort{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: rgb(79, 79, 255);
+}
+
+#content img{
+	width: 300px;
+	background-position: left;
+	float: left;
+	flex-wrap: wrap;
+	margin-right: 25px;
+}
+
+
+
+#contact {
+	font-size: 15px;
+	grid-area: info;
+}
+
+
+#contact::first-line{
+	color: rgb(48, 48, 255);
+}
+
+dt {
+	color: #000033;
+}
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	text-align: center;
+	background-color: white;
+	padding-bottom: 30px;
+	grid-area: footer;
+}
+
+
+
